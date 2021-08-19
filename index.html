@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <!-- Required meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#2196f3">
+  <!-- Your app title -->
+  <title>TEST</title>
+  <!-- Path to Framework7 Library Bundle CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/framework7-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/fonts/Framework7Icons/css/framework7-icons.css" />
+
+</head>
+
+<body>
+  <!-- App root element -->
+
+  <div id="app">
+
+    <div class="panel-backdrop panel-backdrop-in"></div>
+    <div class="panel panel-left panel-reveal panel-resizable panel-init">
+
+    </div>
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+      <!-- Bottom Toolbar -->
+      <div class="toolbar tabbar toolbar-bottom">
+        <div class="toolbar-inner nav-color">
+          <a href="" data-panel=".panel-left" class="tab-link tab-link-active panel-open">
+            <i class="icon f7-icons size-25">menu</i>
+            <!-- <span class="tabbar-label">Menu</span> -->
+          </a>
+        </div>
+      </div>
+      <!-- Initial Page, "data-name" contains page name -->
+      <div data-name="home" class="page">
+
+        <!-- Top Navbar -->
+        <div class="navbar">
+          <div class="navbar-bg nav-color nav-border"></div>
+          <div class="navbar-inner">
+            <div class="title">Home</div>
+          </div>
+        </div>
+
+        <!-- Scrollable page content -->
+        <div class="page-content">
+          {{datiUtente}}
+          <p>Page content goes here</p>
+          <!-- Link to another page -->
+
+          <p><a class="button button-large button-fill" href="/testPage/">Go Page Test</a></p>
+          <p>
+
+            <hr>
+            <h1>Test angular {{yourName}}!</h1>
+            <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Path to Framework7 Library Bundle JS-->
+  <script type="text/javascript" src="js/library/framework7-bundle.min.js"></script>
+  <script type="text/javascript" src="js/library/angular.min.js"></script>
+  <script type="text/javascript" src="js/library/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/settings.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/routes.js"></script>
+  <script type="text/javascript" src="js/initApp.js"></script>
+  <!-- Pages -->
+  <script type="text/javascript" src="pages/testPage/testPage.js"></script>
+</body>
+
+</html>
