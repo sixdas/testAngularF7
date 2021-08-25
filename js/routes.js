@@ -29,28 +29,29 @@ var routes = [{
             domCache: true
         },
         on: {
-            pageBeforeIn: function (e, page) {
-
-
-            },
+            pageBeforeIn: function (e, page) {},
             pageAfterIn: function (event, page) {
                 // do something after page gets into the view
             },
-            pageInit: function (event, page) {
-                // do something when page initialized
-                $$(document).on('pageBeforeAnimation', function (e) {
-                    debugger
-
-
-                    // Ajax pages must be compiled first
-                    $compile(e.target)($scope);
-                    $scope.$apply();
-
-
-
-                });
-
+            pageInit: function (event, page) {},
+            pageBeforeRemove: function (event, page) {
+                // do something before page gets removed from DOM
             },
+        }
+    },
+    {
+
+        path: '/aboutPage/',
+        url: './pages/aboutPage/aboutPage.html',
+        options: {
+            domCache: true
+        },
+        on: {
+            pageBeforeIn: function (e, page) {},
+            pageAfterIn: function (event, page) {
+                // do something after page gets into the view
+            },
+            pageInit: function (event, page) {},
             pageBeforeRemove: function (event, page) {
                 // do something before page gets removed from DOM
             },
