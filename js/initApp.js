@@ -1,6 +1,6 @@
 // Initialize your app
 var $$ = Dom7;
-var angularjs = angular.module("myApp", []);
+
 var app = new Framework7({
     // App root element
     el: '#app',
